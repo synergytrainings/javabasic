@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 /**
- * Created by Ani.Marutyan on 4/15/2015.
+ * Created by Ani.Marutyan on 4/15/2015.  updated
  */
 public class StringComparison {
 
