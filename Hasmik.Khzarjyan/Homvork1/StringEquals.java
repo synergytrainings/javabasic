@@ -16,10 +16,12 @@ public class StringEquals {
  * @return type boolean
  * 
  */	
+	/* second version!! */
 	public static boolean isEquals(String a, String b){
-		
 		Boolean bool = false;
-		if (a != null && b != null && a.length() == b.length() && a.length() != 0){
+		if (a != null && b != null && a == b){
+			bool = true;
+		} else if (a.length() == b.length()){
 			bool = true;
 			for(int i = 0; i<a.length(); i++){
 				if  (a.charAt(i) != b.charAt(i)) {
@@ -30,7 +32,23 @@ public class StringEquals {
 		}
 
        return bool;
-	}   
+	} 
+      /* first version */	
+     /* public static boolean isEquals(String a, String b){
+		Boolean bool = false;
+		if (a != null && b != null && a.length() == b.length() && a.length() != 0){
+			bool = true;
+			for(int i = 0; i<a.length(); i++){
+				if  (a.charAt(i) != b.charAt(i)) {
+					bool = false;
+					break;
+				}
+			}
+		}
+        return bool;
+	}  
+	*/
 	
-
+	
 }
+
