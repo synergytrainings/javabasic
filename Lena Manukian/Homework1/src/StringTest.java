@@ -19,6 +19,7 @@ public class StringTest {
 		for(int i = 0; i< s1.length(); i++){
 	        //if corresponding symbols are equal then continue,else break loop
 			if(s1.indexOf(i) == s2.indexOf(i))
+			if(s1.charAt(i) == s2.charAt(i))
 			{
 				equalSymbolCount++;
 			}
