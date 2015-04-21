@@ -1,4 +1,4 @@
-
+////
 public class StringTest {
 	private static boolean ifEquale(String s1, String s2){
 		//if s1 pointer == s2 pointer
@@ -18,7 +18,7 @@ public class StringTest {
 		int equalSymbolCount = 0;
 		for(int i = 0; i< s1.length(); i++){
 	        //if corresponding symbols are equal then continue,else break loop
-			if(s1.indexOf(i) == s2.indexOf(i))
+			if(s1.charAt(i) == s2.charAt(i))
 			{
 				equalSymbolCount++;
 			}
