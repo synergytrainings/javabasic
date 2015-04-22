@@ -14,7 +14,7 @@ public class MaxElementOfArray {
 		return max;
 	}
 
-	private static int maxElementOfArrayRecursive(int[] arr, int i, int j) {
+	private static int maxElementOfArrayRecursive(int[] arr, int i, int j) throws java.lang.NullPointerException {
 
 		if (arr[i] >= arr[j]) {
 			// if out of ranges
@@ -39,9 +39,14 @@ public class MaxElementOfArray {
 
 		int[] arr = { 1, 3, 1, 5, 2, 9 };
 
-		System.out.println(maxElementOfArrayWithLoop(arr));
+		try {
 
-		System.out.println(maxElementOfArrayRecursive(arr, 0, 1));
+			System.out.println(maxElementOfArrayWithLoop(arr));
+
+			System.out.println(maxElementOfArrayRecursive(arr, 0, 0));
+		} catch (java.lang.NullPointerException e) {
+			System.out.println("Error: you mast initialize arrays");
+		}
 	}
 
 }
