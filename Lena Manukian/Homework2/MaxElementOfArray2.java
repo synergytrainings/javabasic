@@ -1,7 +1,7 @@
 
 public class MaxElementOfArray2 {
 
-	private static int maxElementOfArrayRecursive(int[] arr, int i, int j) throws java.lang.NullPointerException {
+	private static int maxElementOfArrayRecursive(int[] arr, int i, int j) throws java.lang.NullPointerException ,java.lang.ArrayIndexOutOfBoundsException{
 
 		if (arr[i] >= arr[j]) {
 			// if out of ranges
@@ -24,8 +24,16 @@ public class MaxElementOfArray2 {
 
 	public static void main(String[] args) {
 
-		int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
-		System.out.println(maxElementOfArrayRecursive(smallPrimes, 0, 0));
+		int[] smallPrimes = new int[0];
+		try {
+
+			System.out.println(maxElementOfArrayRecursive(smallPrimes, 0, 0));
+		} catch (java.lang.NullPointerException e) {
+			System.out.println("Error: you mast initialize arrays");
+		}
+		catch( java.lang.ArrayIndexOutOfBoundsException e){
+			System.out.println("Error: may be array length = 0");
+		}
 		
 	}
 
