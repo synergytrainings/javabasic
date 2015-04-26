@@ -10,14 +10,15 @@ public class TriangleForGivenN {
 		System.out.println("How many '*' should each edge have? ");
 		int count = in.nextInt();
 		
-		for(int i = count; i <= 1; i--) {
+		for(int i = count; i >= 1; i--) {
 			
 			for(int j = 1; j < i; j++){
-				System.out.println(" ");
+				System.out.print(" ");
 			}
 			for(int k = i; k <= count; k++) {
-				System.out.println("* ");
+				System.out.print("* ");
 			}
+			System.out.println();
 		}
 	}
 }
