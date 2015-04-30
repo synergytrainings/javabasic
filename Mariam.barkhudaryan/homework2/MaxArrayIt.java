@@ -5,6 +5,7 @@ public class MaxArrayIt {
 	public static void main(String[] args) {
 		int[] a = new int[]{9, 20, 7, 5,20, };
 		int k =  a.length;
+		if (a != null){throw new IllegalArgumentException("Illegal Argument. Array is null.");}
 		int max = Integer.MIN_VALUE;
 		for(int i = 0; i < k; i++) {
 		      if  (a[i] > max) {

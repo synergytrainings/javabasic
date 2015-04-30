@@ -16,8 +16,9 @@ public class MatrixMultiplication {
 	        int[][] c = new int[aRows][bColumns];
 	        int s = 0 ;
 	        
-	        if ( aColumns != bRows ) { System.out.println( "error: matrix rows and columns are not same" );}
+	        if (( b == null) || (a == null) ) {throw new IllegalArgumentException("error: null matrix .");}
 	        else 
+	        if 	( aColumns != bRows ) {throw new IllegalArgumentException("error: matrix rows and columns are not same.");}
 	        {
 	        	  for (int i = 0 ; i < aRows ; i++ )
 	        	  {
