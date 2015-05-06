@@ -300,6 +300,8 @@ public class Calculator_2 extends JFrame{
 			action = '$';
 			number1 = "";
 			number2 = "";
+			n1 = false;
+			 n2 = false;
 			text.setText("0");
 			}
 		});
@@ -308,14 +310,21 @@ public class Calculator_2 extends JFrame{
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 			//if n1= true => we on number1 and set point to it
 			if(n1 == true){
+				if(!number1.contains(".")){
+					
 				number1 += ".";
 				text.setText(number1);
 			}
-			if(n2 == true){
-				number2 += ".";
-				text.setText(number2);
 			}
 			
+			if(n2 == true){
+				if(!number2.contains(".")){
+					
+				number2 += ".";
+				text.setText(number2);
+
+			}
+			}
 			}
 		});	
 }
