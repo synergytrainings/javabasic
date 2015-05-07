@@ -42,7 +42,7 @@ public class Calculator_2 extends JFrame {
 		addButtons();
 		addActionListenersToButtons();
 
-		text.setText(String.valueOf("0"));
+		text.setText(String.valueOf(""));
 		// text.setSize(150, 50);
 
 	}
@@ -329,7 +329,7 @@ public class Calculator_2 extends JFrame {
 				result = null;
 				action = '=';
 				number1 = "";
-				text.setText("0");
+				text.setText("");
 			}
 		});
 
