@@ -3,14 +3,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JFrame;
 
-
-public class Calculator_2 extends JFrame{
+public class Calculator_2 extends JFrame {
 	private JPanel p;
-	double result = 0;
+	Double result = null;
 	String number1 = "";
-	String number2 = "" ;
-	boolean n1 = false;
-	boolean n2 = false;
 	char action = '$';
 	JTextField text = new JTextField(20);
 
@@ -45,8 +41,8 @@ public class Calculator_2 extends JFrame{
 
 		addButtons();
 		addActionListenersToButtons();
-        
-		text.setText(String.valueOf(result));
+
+		text.setText(String.valueOf("0"));
 		// text.setSize(150, 50);
 
 	}
@@ -73,259 +69,293 @@ public class Calculator_2 extends JFrame{
 	}
 
 	private void addActionListenersToButtons() {
-		
+
 		b0.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				// if no action before, then concatenate 0 to result
-				if(action == '$'){
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
 				number1 = number1 + "0";
-				n1 = true;
-				n2 = false;
 				text.setText(number1);
-				}
-				else {
-					
-					number2 = number2 + "0";
-					n2 = true;
-					n1 = false;
-					text.setText(number2);
-					
-				}
+
 			}
 		});
 		b1.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				// if no action before, then concatenate 0 to result
-				if(action == '$'){
-					number1 = number1 + "1";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "1";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "1";
+				text.setText(number1);
+
 			}
 		});
 		b2.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "2";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "2";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "2";
+				text.setText(number1);
 			}
 		});
 		b3.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "3";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "3";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "3";
+				text.setText(number1);
 			}
 		});
 		b4.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "4";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "4";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "4";
+				text.setText(number1);
 			}
 		});
 		b5.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "5";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "5";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "5";
+				text.setText(number1);
 			}
 		});
 		b6.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "6";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "6";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "6";
+				text.setText(number1);
 			}
 		});
 		b7.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "7";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "7";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "7";
+				text.setText(number1);
 			}
 		});
 		b8.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "8";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "8";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "8";
+				text.setText(number1);
 			}
 		});
 		b9.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				if(action == '$'){
-					number1 = number1 + "9";
-					n1 = true;
-					n2 = false;
-					text.setText(number1);
-					}
-					else {
-						number2 = number2 + "9";
-						n2 = true;
-						n1 = false;
-						text.setText(number2);
-					}
-				
+				// if after "=" is typed a digit, then restart all:
+				if (action == '=') {
+					result = null;
+				}
+				number1 = number1 + "9";
+				text.setText(number1);
 			}
 		});
-		
-		
-		//set action
+
+		// set action
 		sum.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				action = '+';
+				if (number1 == "") {
+					return;
+				}
+				// if point on tail
+				if (number1.indexOf(".") == number1.length() - 1) {
+					// then concatenate to it 0
+					number1 += "0";
+				}
+				// and continue
+				if (result == null) {
+					result = Double.parseDouble(number1);
+					number1 = "";
+				} else {
+					result += Double.parseDouble(number1);
+					number1 = "";
+					// if 0 after point then type casted to integer
+					if (result - result.intValue() == 0.0) {
+						text.setText(String.valueOf(result.intValue()));
+					} else {
+						text.setText(String.valueOf(result));
+					}
+				}
+
 			}
 		});
 		sub.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				action = '-';
+				if (number1 == "") {
+					return;
+				}
+				// if point on tail
+				if (number1.indexOf(".") == number1.length() - 1) {
+					// then concatenate to it 0
+					number1 += "0";
+				}
+				// and continue
+				if (result == null) {
+					result = Double.parseDouble(number1);
+					number1 = "";
+				} else {
+					result -= Double.parseDouble(number1);
+					number1 = "";
+					// if 0 after point then type casted to integer
+					if (result - result.intValue() == 0.0) {
+						text.setText(String.valueOf(result.intValue()));
+					} else {
+						text.setText(String.valueOf(result));
+					}
+				}
 			}
 		});
 
 		multiple.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				action = '*';
+				if (number1 == "") {
+					return;
+				}
+				// if point on tail
+				if (number1.indexOf(".") == number1.length() - 1) {
+					// then concatenate to it 0
+					number1 += "0";
+				}
+				// and continue
+				if (result == null) {
+					result = Double.parseDouble(number1);
+					number1 = "";
+				} else {
+					result += Double.parseDouble(number1);
+					number1 = "";
+					// if 0 after point then type casted to integer
+					if (result - result.intValue() == 0.0) {
+						text.setText(String.valueOf(result.intValue()));
+					} else {
+						text.setText(String.valueOf(result));
+					}
+				}
+
 			}
 		});
 		division.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				action = '/';
+				if (number1 == "") {
+					return;
+				}
+				// if point on tail
+				if (number1.indexOf(".") == number1.length() - 1) {
+					// then concatenate to it 0
+					number1 += "0";
+				}
+				// and continue
+				if (result == null) {
+					result = Double.parseDouble(number1);
+					number1 = "";
+				} else {
+					result += Double.parseDouble(number1);
+					number1 = "";
+					// if 0 after point then type casted to integer
+					if (result - result.intValue() == 0.0) {
+						text.setText(String.valueOf(result.intValue()));
+					} else {
+						text.setText(String.valueOf(result));
+					}
+				}
+
 			}
 		});
 		equal.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-				
+				if (number1 == "") {
+					action = '=';
+					return;
+				}
+				// if point on tail
+				if (number1.indexOf(".") == number1.length() - 1) {
+					// then concatenate to it 0
+					number1 += "0";
+				}
+				// and continue
 				switch (action) {
 				case '+':
-				 result += Double.parseDouble(number1) + Double.parseDouble(number2);
+					result += Double.parseDouble(number1);
 					break;
-				case '-': 
-					result -= Double.parseDouble(number1) - Double.parseDouble(number2);
+				case '-':
+					result -= Double.parseDouble(number1);
 					break;
 				case '*':
-					result *= Double.parseDouble(number1) * Double.parseDouble(number2);
+					result *= Double.parseDouble(number1);
 					break;
 				case '/':
-					result /= Double.parseDouble(number1) / Double.parseDouble(number2);
+					result /= Double.parseDouble(number1);
 				}
-				
-				text.setText(String.valueOf(result));
-				number1 = "0";
-				number2 = "";
+
+				// if 0 after point then type casted to integer
+				if (result - result.intValue() == 0.0) {
+					text.setText(String.valueOf(result.intValue()));
+				} else {
+					text.setText(String.valueOf(result));
+				}
+				number1 = "";
+				action = '=';
 			}
 		});
 
 		clear.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-			//set start values	
-			result = 0;
-			action = '$';
-			number1 = "";
-			number2 = "";
-			n1 = false;
-			 n2 = false;
-			text.setText("0");
+				// set start values
+				result = null;
+				action = '=';
+				number1 = "";
+				text.setText("0");
 			}
 		});
-		
+
 		point.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
-			//if n1= true => we on number1 and set point to it
-			if(n1 == true){
-				if(!number1.contains(".")){
-					
+				// if it is the first clicked button
+				if (action == '$' && number1 == "") {
+					number1 = "0.";
+					text.setText(number1);
+					return;
+				}
+				// if is not first, but number1 is empty because '.' clicked
+				// after any action
+				if (number1 == "") {
+					return;
+				}
+				// if number is already rational
+				if (number1.indexOf(".") != -1) {
+					return;
+				}
+				// else concatenate a point to number1
 				number1 += ".";
 				text.setText(number1);
-			}
-			}
-			
-			if(n2 == true){
-				if(!number2.contains(".")){
-					
-				number2 += ".";
-				text.setText(number2);
 
 			}
-			}
-			}
-		});	
-}
+		});
+	}
+
 }
