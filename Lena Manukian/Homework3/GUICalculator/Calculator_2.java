@@ -42,7 +42,7 @@ public class Calculator_2 extends JFrame {
 		addButtons();
 		addActionListenersToButtons();
 
-		text.setText(String.valueOf(""));
+		text.setText("");
 		// text.setSize(150, 50);
 
 	}
