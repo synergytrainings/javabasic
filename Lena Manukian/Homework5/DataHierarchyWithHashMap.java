@@ -1,22 +1,24 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DataHierarchyWithHashMap {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> indicator;
+		List<Integer> indicator;
 
 		// System.out.println(indicator);
 		// crate districts
-		HashMap<Integer, ArrayList<Integer>> district;
+		Map<Integer, List<Integer>> district;
 
 		// create provinces
-		HashMap<Integer, HashMap<Integer, ArrayList<Integer>>> provinces = new HashMap<Integer, HashMap<Integer, ArrayList<Integer>>>();
+		Map<Integer, Map<Integer, List<Integer>>> provinces = new HashMap<Integer, Map<Integer, List<Integer>>>();
 
 		// fill provinces associated with district + indicator matrix
 		int addToIndex = 0;
 		for (int k = 0; k < 3; k++) {
-			district = new HashMap<Integer, ArrayList<Integer>>();
+			district = new HashMap<Integer, List<Integer>>();
 			for (int j = 0; j < 3; j++) {
 				int size = (int) Math.random() + 4;
 				// fill indicators
