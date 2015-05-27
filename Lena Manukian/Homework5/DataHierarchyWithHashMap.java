@@ -36,6 +36,7 @@ public class DataHierarchyWithHashMap {
 
 		}
 		// output the hierarchy
+		/*
 		for (Integer i : provinces.keySet()) {
 
 			System.out.println("provinces " + i);
@@ -46,7 +47,16 @@ public class DataHierarchyWithHashMap {
 				System.out.println(" indicator: " + provinces.get(i).get(j));
 			}
 		}
-
+*/
+		for(Map.Entry<Integer, Map<Integer,List<Integer>>> e: provinces.entrySet()){
+			System.out.println("provinces " + e.getKey());
+			for(Map.Entry<Integer, List<Integer>> k: e.getValue().entrySet()){
+				System.out.print("         ");
+				System.out.println("district " + k.getKey());
+				System.out.print("                 ");
+				System.out.println(" indicator: " + k.getValue());
+			}
+		}
 	}
 
 }
