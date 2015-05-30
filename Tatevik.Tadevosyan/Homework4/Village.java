@@ -1,13 +1,13 @@
 package com.synisys.trainings;
 
-import java.util.Map;
+import java.util.ArrayList;
 
 public class Village {
 	private Integer villageID;
 	private String villageName;
 	private String villageCode;
 	private District parentDistrict;
-	private Map<Integer, String> indicators;
+	private ArrayList<Indicator> indicators;
 
 	public Integer getVillageID() {
 		return villageID;
@@ -41,12 +41,12 @@ public class Village {
 		this.parentDistrict = parentDistrict;
 	}
 
-	public Map<Integer, String> getIndicators() {
+	public ArrayList<Indicator> getIndicators() {
 		return indicators;
 	}
 
-	public void addIndicators(Integer key, String value) {
-		indicators.put(key, value);
+	public void addIndicators(Indicator ind) {
+		indicators.add(ind);
 	}
 
 }
