@@ -33,7 +33,7 @@ public class DataHierarchyWithArrayList {
 		for (int d = 0; d < districtLen; d++) {
 
 			for (int i = 0; i < 3; i++) {
-				values.add(rand.nextInt());
+				values.add(rand.nextInt(100));
 			}
 			indicatorValues.add(new IndicatorValues(districts.get(d).getId(), values));
 			values.clear();
