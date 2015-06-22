@@ -1,4 +1,4 @@
-package adequat;
+
 
 
 import java.util.HashMap;
