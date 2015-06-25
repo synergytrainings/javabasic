@@ -1,16 +1,14 @@
 
-
-
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Indicator {
 private Integer id;
-Map<District,Integer> DistrictValues;//every entity is an <District, Value> pair
+//Map<District,Integer> districtValues;//every entity is an <District, Value> pair
 
 public Indicator(Integer id){
 	this.id = id;
-	DistrictValues = new HashMap<District,Integer>();
+	//districtValues = new TreeMap<District,Integer>();
 }
 
 
@@ -22,23 +20,23 @@ public void setId(Integer id) {
 	this.id = id;
 }
 
+/*
 public Map<District, Integer> getIndicatorValues() {
-	return DistrictValues;
+	return districtValues;
 }
 
 public void putDistrictValues(District key, Integer value ) {
-	this.DistrictValues.put(key, value) ;
+	this.districtValues.put(key, value) ;
 }
 
-/**
- * 
- * @return sum of values of an Indicator 
- */
+
+
 public Integer totalOfIndicatorsValues(){
 	int sum = 0;
-	for(Integer l:DistrictValues.values()){
+	for(Integer l : districtValues.values()){
 		sum += l;
 	}
 	return sum;
 }
+*/
 }

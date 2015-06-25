@@ -1,15 +1,14 @@
 
-
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
-public class District {
+public class District implements Comparable<District>{
 private Integer id;//District ID
-private Map<Indicator, Integer> indicatorValues;//every entity is an <Indicator,Value> pair
+private Map<Integer, Integer> indicatorValues;//every entity is an <Indicator,Value> pair
 
 public District(Integer id){
 	this.id = id;
-	indicatorValues = new HashMap<Indicator, Integer>();
+	indicatorValues = new TreeMap<Integer, Integer>();
 }
 
 public Integer getId() {
@@ -18,7 +17,7 @@ public Integer getId() {
 public void setId(Integer id) {
 	this.id = id;
 }
-public  Map<Indicator, Integer> getIndicators() {
+public  Map<Integer, Integer> getIndicators() {
 	return indicatorValues;
 }
 /**
@@ -26,7 +25,7 @@ public  Map<Indicator, Integer> getIndicators() {
  * @param key is an Indicator
  * @param value is a Value
  */
-public void putIndicatorValue( Indicator key, Integer value) {
+public void putIndicatorValue( Integer key, Integer value) {
 	this.indicatorValues.put(key,value);
 }
 
@@ -41,5 +40,16 @@ public Integer totalOfIndicatorsValuesForDistrict(){
 public Object clone(){
 	District d = new District(this.id);
 	return d;
+}
+
+
+public int compareTo(District d){
+	if(this.id == d.id)
+	return 0;
+	
+	if(this.id < d.id)
+		return -1;
+	
+	return 1;
 }
 }
